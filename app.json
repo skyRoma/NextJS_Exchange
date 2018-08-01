@@ -1,0 +1,15 @@
+{
+  "name": "NextJS_Exchange",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
