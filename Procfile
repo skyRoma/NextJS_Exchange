@@ -1,1 +1,1 @@
-web: NODE_ENV=production node server.js && yaen build
+web: NODE_ENV=production node server.js

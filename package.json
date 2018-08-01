@@ -7,7 +7,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
-    "heroku-postbuild": "yarn && yarn --only=dev --no-shrinkwrap && yarn build build"
+    "heroku-postbuild": "yarn && yarn --only=dev --no-shrinkwrap && yarn build"
   },
   "engines": {
     "yarn": "1.x.x"
