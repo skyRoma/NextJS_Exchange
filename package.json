@@ -1,0 +1,35 @@
+{
+  "name": "NextJS_Exchange",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Roman Sluka",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "engines": {
+    "yarn": "1.x.x"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "isomorphic-unfetch": "^2.1.1",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.1",
+    "express": "^4.16.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "validator": "^6.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}
