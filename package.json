@@ -24,8 +24,8 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.2.1",
     "express": "^4.16.2",
+    "mongoose": "^5.2.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "validator": "^6.2.0"
