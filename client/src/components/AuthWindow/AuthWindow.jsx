@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Router from 'next/router';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { UserImg, SignView, LoginBtn, AuthQuestion, AuthLink } from './style';
 import { ErrorMsg } from '../AuthInput/style';
 import AuthInput from '../AuthInput/AuthInput';
@@ -101,7 +102,7 @@ class AuthWindow extends Component {
   render() {
     // const { from } = this.props.location.state || { from: { pathname: '/' } };
     // const { pathname } = this.props.location;
-    const pathname = paths.login;
+    const pathname = paths.join;
     const { redirectToReferrer } = this.state;
     if (redirectToReferrer) {
       return Router.push(from.pathname);
@@ -120,7 +121,9 @@ class AuthWindow extends Component {
             <LoginBtn onClick={this.processFormLogin}>Sign In</LoginBtn>
             <AuthQuestion>
               {'Don\'t have an account? '}
-              <AuthLink to={paths.join}>Create one.</AuthLink>
+              <Link href={paths.join} passHref prefetch>
+                <AuthLink>Create one.</AuthLink>
+              </Link>
             </AuthQuestion>
           </React.Fragment>
         ) : (
@@ -128,7 +131,9 @@ class AuthWindow extends Component {
             <LoginBtn onClick={this.processFormSignUp}>Sign Up</LoginBtn>
             <AuthQuestion>
               {'Already have an account? '}
-              <AuthLink to={paths.login}>Log in.</AuthLink>
+              <Link href={paths.login} passHref prefetch>
+                <AuthLink>Log in.</AuthLink>
+              </Link>
             </AuthQuestion>
           </React.Fragment>
         )}

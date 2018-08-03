@@ -1,5 +1,5 @@
 import styled, { injectGlobal } from 'styled-components';
-import Link from 'next/link';
+// import Link from 'next/link';
 import user from '../../images/user.svg';
 import foreign from '../../images/foreign.png';
 import bg from '../../images/bg.jpg';
@@ -31,14 +31,17 @@ injectGlobal`
   }
 `;
 
-export const AuthLink = styled(Link)`
+export const AuthLink = styled.a`
     text-decoration: none;
     width: 40%;
     margin: 0 auto;
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
     }
-    color: #00bcd4;
+    &:hover {
+      cursor: pointer;
+    }
+    color: #6d03bb;
 `;
 
 export const UserImg = styled.figure`

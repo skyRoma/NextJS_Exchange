@@ -3,9 +3,9 @@ const withImages = require('next-images');
 
 // module.exports = withImages();
 module.exports = withPlugins([
-    [withImages, {
-      /* config for next-optimized-images */
-    }],
-   
-    // your other plugins here
-  ]);
+  [withImages, {
+    /* config for next-optimized-images */
+  }],
+
+  // your other plugins here
+]);
