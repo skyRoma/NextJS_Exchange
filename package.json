@@ -10,7 +10,8 @@
     "heroku-postbuild": "yarn && yarn --only=dev --no-shrinkwrap && yarn build"
   },
   "engines": {
-    "yarn": "1.x.x"
+    "yarn": "1.x.x",
+    "node": "8.11.2"
   },
   "cacheDirectories": [
     "node_modules"
