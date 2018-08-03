@@ -1,0 +1,9 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "inline-import-data-uri",
+    ["babel-plugin-styled-components", {
+      "ssr": true
+    }]
+  ]
+}
