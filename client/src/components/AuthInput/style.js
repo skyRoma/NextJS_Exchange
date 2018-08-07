@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Input = styled.input.attrs({
-  autoComplete: 'off',
+  // autoComplete: 'off',
 })`
   width:100%;
   height: 32px;

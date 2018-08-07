@@ -64,7 +64,7 @@ class AuthWindow extends Component {
   }
 
   processFormSignUp = async () => {
-    const { fetchSignUp, addSucessMsg, history } = this.props;
+    const { fetchSignUp, addSucessMsg } = this.props;
 
     fetchSignUp(this.getFormData())
       .then(async (res) => {
@@ -78,7 +78,7 @@ class AuthWindow extends Component {
           errors: {},
         });
         addSucessMsg(data.message);
-        history.push(paths.login);
+        Router.push(paths.login);
       })
       .catch((errorData) => {
         const errors = errorData.errors ? errorData.errors : {};
@@ -102,10 +102,10 @@ class AuthWindow extends Component {
   render() {
     // const { from } = this.props.location.state || { from: { pathname: '/' } };
     // const { pathname } = this.props.location;
-    const pathname = paths.join;
+    const { pathname } = Router;
     const { redirectToReferrer } = this.state;
     if (redirectToReferrer) {
-      return Router.push(from.pathname);
+      return Router.push('/');
     }
     const { summary, email, password } = this.state.errors;
     const { successMessage } = this.state;
@@ -146,7 +146,6 @@ AuthWindow.propTypes = {
   addSucessMsg: PropTypes.func.isRequired,
   removeSucessMsg: PropTypes.func.isRequired,
   successMessage: PropTypes.string.isRequired,
-  location: PropTypes.object.isRequired,
 };
 
 export default AuthWindow;

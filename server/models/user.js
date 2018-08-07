@@ -4,13 +4,13 @@ const bcrypt = require('bcrypt');
 const UserSchema = new mongoose.Schema({
   email: {
     type: String,
-    index: { unique: true }
+    index: { unique: true },
   },
   password: String,
-  counter: { 
-    type: Number, 
-    default: 0, 
-  }, 
+  counter: {
+    type: Number,
+    default: 0,
+  },
 });
 
 UserSchema.methods.comparePassword = function comparePassword(password, callback) {

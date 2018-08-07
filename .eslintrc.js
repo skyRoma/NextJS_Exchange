@@ -14,5 +14,6 @@ module.exports = {
             "ImportDeclaration": "never",
         }],
         "react/jsx-one-expression-per-line": 0,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     }
 };

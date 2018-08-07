@@ -1,4 +1,5 @@
-import AuthWindow from '../client/src/components/AuthWindow/AuthWindow'
+import AuthWindow from '../client/src/containers/AuthWindow';
+import Router from 'next/router';
 
 export default () => (
   <AuthWindow />
