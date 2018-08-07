@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-unfetch';
 import Auth from '../services/Auth';
 
 export const ADD_SUCCESS_MSG = 'ADD_SUCCESS_MSG';

@@ -7,12 +7,12 @@ const passport = require('passport');
 
 require('./server/models').connect(process.env.MONGO_URL);
 
-const port = parseInt(process.env.PORT, 10) || 3000
-const dev = process.env.NODE_ENV !== 'production'
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({
-  dev
-})
-const handle = app.getRequestHandler()
+  dev,
+});
+const handle = app.getRequestHandler();
 
 const localSignupStrategy = require('./server/passport/local-signup');
 const localLoginStrategy = require('./server/passport/local-login');
@@ -35,9 +35,7 @@ app.prepare()
     server.use('/auth', authRoutes);
     server.use('/api', apiRoutes);
 
-    // server.get('/a', (req, res) => {
-    //   return app.render(req, res, '/b', req.query);
-    // })
+    // server.get('/join', (req, res) => app.render(req, res, '/b', req.query));
 
     // server.get('/b', (req, res) => {
     //   return app.render(req, res, '/a', req.query);
@@ -50,21 +48,19 @@ app.prepare()
     // })
 
     server.get('/p/:id', (req, res) => {
-      const actualPage = '/post'
+      const actualPage = '/post';
       const queryParams = {
-        id: req.params.id
-      }
-      app.render(req, res, actualPage, queryParams)
-    })
+        id: req.params.id,
+      };
+      app.render(req, res, actualPage, queryParams);
+    });
 
-    server.get('*', (req, res) => {
-      return handle(req, res);
-    })
+    server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, (err) => {
       if (err) throw err;
       console.log(`> Ready on http://localhost:${port}`);
-    })
+    });
   })
   .catch((ex) => {
     console.error(ex.stack);

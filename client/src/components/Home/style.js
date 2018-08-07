@@ -1,5 +1,32 @@
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import logo from '../../images/logo.png';
+import bg from '../../images/bg.jpg';
+
+injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto');
+
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    // background: linear-gradient(to bottom,#1f50daeb,#bbf0f9);
+    background-image: url(${bg});
+    background-size: 100% 100%;
+    user-select: none;
+  }
+
+  h1 {
+    font-family: Montserrat;
+  }
+
+  .success-message {
+    text-align: center;
+    color: #5b945b;
+    font-weight: bold;
+    font-size: 16px;
+  }
+`;
 
 export const StyledLink = styled.a`
     text-decoration: none;
